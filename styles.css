@@ -1,0 +1,128 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Main container - equivalent to SafeAreaView */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+}
+
+/* Top horizontal buttons container - equivalent to topButtonContainer */
+.top-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+/* Bottom vertical buttons container - equivalent to bottomButtonContainer */
+.bottom-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Top horizontal buttons - equivalent to button style */
+.button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    width: 30%;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    text-align: center;
+}
+
+/* Bottom vertical buttons - equivalent to verticalButton style */
+.vertical-button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    margin: 5px 0;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    text-align: center;
+}
+
+/* Button colors - equivalent to blueButton, redButton, greenButton */
+.blue-button {
+    background-color: #2196F3;
+}
+
+.red-button {
+    background-color: #F44336;
+}
+
+.green-button {
+    background-color: #4CAF50;
+}
+
+/* Hover effects */
+.button:hover,
+.vertical-button:hover {
+    opacity: 0.8;
+}
+
+/* Middle text container - equivalent to middleTextContainer */
+.middle-text-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Middle text - equivalent to middleText */
+.middle-text {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .top-button-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .button {
+        width: 100%;
+    }
+    
+    .middle-text {
+        font-size: 16px;
+        padding: 20px;
+    }
+    
+    .vertical-button {
+        width: 90%;
+    }
+}
+
+/* Active state for better mobile interaction */
+.button:active,
+.vertical-button:active {
+    transform: scale(0.98);
+}
